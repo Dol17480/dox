@@ -1,0 +1,228 @@
+➜  cx3_7 mkdir homeworks
+➜  cx3_7 cd homeworks 
+➜  homeworks mkdir week1
+➜  homeworks cd week1
+➜  week1 ls
+➜  week1 mkdir  w1d1
+➜  week1 cd w1d1
+➜  w1d1 git init
+Initialized empty Git repository in /Users/user/cx3_7/homeworks/week1/w1d1/.git/
+➜  w1d1 git:(master) cd ..
+➜  week1 ls
+w1d1
+➜  week1 gst        
+fatal: Not a git repository (or any of the parent directories): .git
+➜  week1 cd git: (master)
+zsh: number expected
+➜  week1 cd w1d1
+➜  w1d1 git:(master) touch othertextfile.txt
+➜  w1d1 git:(master) ✗ ls
+othertextfile.txt
+➜  w1d1 git:(master) ✗ gst
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	othertextfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  w1d1 git:(master) ✗ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+	othertextfile.txt
+
+nothing added to commit but untracked files present
+➜  w1d1 git:(master) ✗ ls
+othertextfile.txt
+➜  w1d1 git:(master) ✗ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+	othertextfile.txt
+
+nothing added to commit but untracked files present
+➜  w1d1 git:(master) ✗ subl .
+➜  w1d1 git:(master) ✗ 
+➜  w1d1 git:(master) ✗ gst
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	othertextfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  w1d1 git:(master) ✗ git add othertextfile.txt
+➜  w1d1 git:(master) ✗ gst
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   othertextfile.txt
+
+➜  w1d1 git:(master) ✗ git commit -m "new changes"
+[master (root-commit) f0c6ba4] new changes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 othertextfile.txt
+➜  w1d1 git:(master) git remote add origin git@github.com:Dol17480/git_demo2.git 
+git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 230 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:Dol17480/git_demo2.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+➜  w1d1 git:(master) subl .
+➜  w1d1 git:(master) git add .
+➜  w1d1 git:(master) ✗ git commit -m othertextfile.txt
+[master 4fbca90] othertextfile.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+➜  w1d1 git:(master) git push
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 262 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:Dol17480/git_demo2.git
+   f0c6ba4..4fbca90  master -> master
+➜  w1d1 git:(master) cd week 1
+cd: no such file or directory: /Users/user/cx3_7/homeworks/11/w1d1
+➜  w1d1 git:(master) cd Labs
+cd: no such file or directory: Labs
+➜  w1d1 git:(master) cd week 1
+cd: no such file or directory: /Users/user/cx3_7/homeworks/11/w1d1
+➜  w1d1 git:(master) mkdir day_2
+➜  w1d1 git:(master) cd day_2
+➜  day_2 git:(master) rm rf .git
+rm: rf: No such file or directory
+rm: .git: No such file or directory
+➜  day_2 git:(master) cd../
+zsh: no such file or directory: cd../
+➜  day_2 git:(master) ls -a
+.  ..
+➜  day_2 git:(master) cd ..
+➜  w1d1 git:(master) ls -a
+.                 .git              othertextfile.txt
+..                day_2
+➜  w1d1 git:(master) cd ..
+➜  week1 cd..
+zsh: command not found: cd..
+➜  week1 cd ..
+➜  homeworks cd ..
+➜  cx3_7 ls 
+Labs             cx3_7_classnotes homeworks
+➜  cx3_7 mkdir day_2
+➜  cx3_7 cd day_2
+➜  day_2 irb
+irb(main):001:0> "hello world"
+=> "hello world"
+irb(main):002:0> 
+irb(main):003:0* "new string".class
+=> String
+irb(main):004:0> "new string". method
+ArgumentError: wrong number of arguments (given 0, expected 1)
+	from (irb):4:in `method'
+	from (irb):4
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):005:0> "new string".methods
+=> [:include?, :unicode_normalize, :%, :to_c, :unicode_normalize!, :unicode_normalized?, :*, :+, :count, :partition, :unpack, :encode, :encode!, :next, :casecmp, :insert, :bytesize, :match, :succ!, :next!, :upto, :index, :rindex, :replace, :clear, :chr, :+@, :-@, :setbyte, :getbyte, :<=>, :<<, :scrub, :scrub!, :byteslice, :==, :===, :dump, :=~, :downcase, :[], :[]=, :upcase, :downcase!, :capitalize, :swapcase, :upcase!, :oct, :empty?, :eql?, :hex, :chars, :split, :capitalize!, :swapcase!, :concat, :codepoints, :reverse, :lines, :bytes, :prepend, :scan, :ord, :reverse!, :center, :sub, :freeze, :inspect, :intern, :end_with?, :gsub, :chop, :crypt, :gsub!, :start_with?, :rstrip, :sub!, :ljust, :length, :size, :strip!, :succ, :rstrip!, :chomp, :strip, :rjust, :lstrip!, :tr!, :chomp!, :squeeze, :lstrip, :tr_s!, :to_str, :to_sym, :chop!, :each_byte, :each_char, :each_codepoint, :to_s, :to_i, :tr_s, :delete, :encoding, :force_encoding, :sum, :delete!, :squeeze!, :tr, :to_f, :valid_encoding?, :slice, :slice!, :rpartition, :each_line, :b, :to_r, :ascii_only?, :hash, :<, :>, :<=, :>=, :between?, :instance_of?, :public_send, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :private_methods, :kind_of?, :instance_variables, :tap, :is_a?, :extend, :define_singleton_method, :to_enum, :enum_for, :!~, :respond_to?, :display, :send, :object_id, :method, :public_method, :singleton_method, :nil?, :class, :singleton_class, :clone, :dup, :itself, :taint, :tainted?, :untaint, :untrust, :trust, :untrusted?, :methods, :protected_methods, :frozen?, :public_methods, :singleton_methods, :!, :!=, :__send__, :equal?, :instance_eval, :instance_exec, :__id__]
+irb(main):006:0> "heelo".methods.sort
+=> [:!, :!=, :!~, :%, :*, :+, :+@, :-@, :<, :<<, :<=, :<=>, :==, :===, :=~, :>, :>=, :[], :[]=, :__id__, :__send__, :ascii_only?, :b, :between?, :bytes, :bytesize, :byteslice, :capitalize, :capitalize!, :casecmp, :center, :chars, :chomp, :chomp!, :chop, :chop!, :chr, :class, :clear, :clone, :codepoints, :concat, :count, :crypt, :define_singleton_method, :delete, :delete!, :display, :downcase, :downcase!, :dump, :dup, :each_byte, :each_char, :each_codepoint, :each_line, :empty?, :encode, :encode!, :encoding, :end_with?, :enum_for, :eql?, :equal?, :extend, :force_encoding, :freeze, :frozen?, :getbyte, :gsub, :gsub!, :hash, :hex, :include?, :index, :insert, :inspect, :instance_eval, :instance_exec, :instance_of?, :instance_variable_defined?, :instance_variable_get, :instance_variable_set, :instance_variables, :intern, :is_a?, :itself, :kind_of?, :length, :lines, :ljust, :lstrip, :lstrip!, :match, :method, :methods, :next, :next!, :nil?, :object_id, :oct, :ord, :partition, :prepend, :private_methods, :protected_methods, :public_method, :public_methods, :public_send, :remove_instance_variable, :replace, :respond_to?, :reverse, :reverse!, :rindex, :rjust, :rpartition, :rstrip, :rstrip!, :scan, :scrub, :scrub!, :send, :setbyte, :singleton_class, :singleton_method, :singleton_methods, :size, :slice, :slice!, :split, :squeeze, :squeeze!, :start_with?, :strip, :strip!, :sub, :sub!, :succ, :succ!, :sum, :swapcase, :swapcase!, :taint, :tainted?, :tap, :to_c, :to_enum, :to_f, :to_i, :to_r, :to_s, :to_str, :to_sym, :tr, :tr!, :tr_s, :tr_s!, :trust, :unicode_normalize, :unicode_normalize!, :unicode_normalized?, :unpack, :untaint, :untrust, :untrusted?, :upcase, :upcase!, :upto, :valid_encoding?]
+irb(main):007:0> "hello world"
+=> "hello world"
+irb(main):008:0> my_string = "hello world"
+=> "hello world"
+irb(main):009:0> my_tsring
+NameError: undefined local variable or method `my_tsring' for main:Object
+Did you mean?  my_string
+	from (irb):9
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):010:0> my_string
+=> "hello world"
+irb(main):011:0> quit
+➜  day_2 irb
+irb(main):001:0> my_string.class
+NameError: undefined local variable or method `my_string' for main:Object
+Did you mean?  String
+	from (irb):1
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):002:0> String
+=> String
+irb(main):003:0> age = 24
+=> 24
+irb(main):004:0> age.class
+=> Fixnum
+irb(main):005:0> age.methods.sort
+=> [:!, :!=, :!~, :%, :&, :*, :**, :+, :+@, :-, :-@, :/, :<, :<<, :<=, :<=>, :==, :===, :=~, :>, :>=, :>>, :[], :^, :__id__, :__send__, :abs, :abs2, :angle, :arg, :between?, :bit_length, :ceil, :chr, :class, :clone, :coerce, :conj, :conjugate, :define_singleton_method, :denominator, :display, :div, :divmod, :downto, :dup, :enum_for, :eql?, :equal?, :even?, :extend, :fdiv, :floor, :freeze, :frozen?, :gcd, :gcdlcm, :hash, :i, :imag, :imaginary, :inspect, :instance_eval, :instance_exec, :instance_of?, :instance_variable_defined?, :instance_variable_get, :instance_variable_set, :instance_variables, :integer?, :is_a?, :itself, :kind_of?, :lcm, :magnitude, :method, :methods, :modulo, :negative?, :next, :nil?, :nonzero?, :numerator, :object_id, :odd?, :ord, :phase, :polar, :positive?, :pred, :private_methods, :protected_methods, :public_method, :public_methods, :public_send, :quo, :rationalize, :real, :real?, :rect, :rectangular, :remainder, :remove_instance_variable, :respond_to?, :round, :send, :singleton_class, :singleton_method, :singleton_method_added, :singleton_methods, :size, :step, :succ, :taint, :tainted?, :tap, :times, :to_c, :to_enum, :to_f, :to_i, :to_int, :to_r, :to_s, :truncate, :trust, :untaint, :untrust, :untrusted?, :upto, :zero?, :|, :~]
+irb(main):006:0> number_1 = 22
+=> 22
+irb(main):007:0> number_@ = 10
+SyntaxError: (irb):7: `@' without identifiers is not allowed as an instance variable name
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):008:0> number_2 = 10
+=> 10
+irb(main):009:0> number_1 = number_2
+=> 10
+irb(main):010:0> number_1 + number_2
+=> 20
+irb(main):011:0> 1 + "2"
+TypeError: String can't be coerced into Fixnum
+	from (irb):11:in `+'
+	from (irb):11
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):012:0> 1 + "2".to_i
+=> 3
+irb(main):013:0> word_1 = "hello"
+=> "hello"
+irb(main):014:0> word_2 = "world"
+=> "world"
+irb(main):015:0> greeting = word_1 + word_2
+=> "helloworld"
+irb(main):016:0> greeting.class
+=> String
+irb(main):017:0> greeting.upcase
+=> "HELLOWORLD"
+irb(main):018:0> greeting.length
+=> 10
+irb(main):019:0> greeting.capitalize
+=> "Helloworld"
+irb(main):020:0> greeting.gsub ('hello', 'goodbye')
+SyntaxError: (irb):20: syntax error, unexpected ',', expecting ')'
+greeting.gsub ('hello', 'goodbye')
+                       ^
+(irb):20: syntax error, unexpected ')', expecting end-of-input
+	from /Users/user/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
+irb(main):021:0> quit
+➜  day_2 irb
+irb(main):001:0> 4 == 2+2
+=> true
+irb(main):002:0> 4 == 2+3
+=> false
+irb(main):003:0> "cat" == "cat"
+=> true
+irb(main):004:0> "cat" == "Cat"
+=> false
+irb(main):005:0> "cat" == 'cat'
+=> true
+irb(main):006:0> "1" == 1
+=> false
+irb(main):007:0> "1".to_i == 1
+=> true
+irb(main):008:0> "1" == 1.to_s
+=> true
+irb(main):009:0> quit
+➜  day_2 subl what_animal.rb
+➜  day_2 ruby what_animal.rb
+ruby: No such file or directory -- what_animal.rb (LoadError)
+➜  day_2 
